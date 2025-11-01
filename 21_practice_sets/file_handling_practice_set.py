@@ -99,6 +99,27 @@ import sys
 
 # upper_copy("note.txt")
 
+# Create a script that deletes all .tmp files from the current directory using os and os.remove().
+
+# files = os.listdir()
+
+# for file in files:
+#     if file.endswith("txt"):
+#         os.remove(file)
+#         print(f"{file} has been removed")
+
+
+
+# Write a Python command-line tool that takes a folder name and prints the total size of all files inside it (use os.path.getsize()).
+
+def get_size(filename):
+    size = os.path.getsize(filename)
+    return size
+
+if __name__ == "__main__":
+    filename = sys.argv[1]
+    filesize = get_size(filename)
+    print(f"size of file {filename} is {filesize} bytes")
 
 
 
