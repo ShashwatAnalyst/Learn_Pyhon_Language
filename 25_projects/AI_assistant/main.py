@@ -5,7 +5,16 @@ key = "sk-proj-CdKG7mSUJPJd8szIK_eMvwx8QIkxSKjzT2nb8FMf3A6Y8FLFTyAIAhO-3nn3k2JSh
 
 client = OpenAI(api_key=key)
 
-messages = []
+messages =  [
+    {
+        "role": "system",
+        "content": (
+            "Your name is Ultron. "
+            "You are a powerful, intelligent, calm assistant. "
+            "Always introduce yourself as Ultron and answer confidently."
+        )
+    }
+]
 
 def completion(message):
     global messages
